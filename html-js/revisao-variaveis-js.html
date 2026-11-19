@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Revisão de variáveis</title>
+    </head>
+    <body>
+        
+
+        <script>
+            console.log("1 - Declaração e Tipos de Variáveis");
+            /* 
+            Declarações: 
+            let ele diz que o valor daquela variável pode sofrer alteração.,
+            const ele diz que o valor daquela variável não pode ser alterado. 
+            e var antigo e não tanto utilizado.
+            */
+           
+           /* Tipos de Variáveis:
+           string(texto),
+           number(número),
+           boolean(boleano),
+           null(nulo),
+           underfined(indefinido),
+           array,
+           object
+           */
+          
+            let nome = "Maria";
+            let idade = 25;
+            const maiorDeIdade = true;
+             
+            console.log(typeof(nome));
+            console.log(typeof(idade));
+            console.log(typeof(maiorDeIdade));
+            console.log(nome, idade, maiorDeIdade);
+             
+            console.log("2- Operações Matemáticas e Calculadora");
+             
+             /* Operações Matemáticas:
+             Soma, subtração, multiplicação e divisão
+             */
+            
+            let a = 10;
+            let b = 3;
+            
+            console.log(a + b);
+            console.log(a - b);
+            console.log(a * b);
+            console.log(a / b);
+
+            /* 
+            % - Resto da divisão.
+            ** - Eleva à potência.
+            */
+           
+           console.log(a % b);
+           console.log(10 % 2);
+           console.log(2 ** 3); /* 2 x 2 x 2  = 8 */
+           
+           console.log("3- Manipulação de Strings e Dados");
+           
+           console.log(`Nome "Maria" - Quantidade de letras = ${nome.length}`);
+           console.log(`Nome "Maria" - Maiúsculo = ${nome.toUpperCase()}`);
+           console.log(`Nome "Maria" - Minúsculo = ${nome.toLowerCase()}`);
+           
+           /* 
+           Concatenação = " texto " + nome
+           template litarário = ` texto ${nome} texto 25 `
+           */
+          console.log("Concatenação - " + "Olá, " + nome + " seja bem-vinda!");
+          console.log(`Template litarário - Olá,  ${nome}  seja bem-vinda!`);
+          
+           /* 
+           includes = Verifica se tem uma palavra, item ou caracteres incluído.
+           replace = troca / substitui.
+           split = dividir o texto.
+           */
+          
+          let frases = "pão, leite, café"; 
+          console.log("Includes: " + frases.includes("leite"));
+          console.log("Replace: " + frases.replace("leite", "Suco de maçã"));
+          console.log("Split: " + frases.split(", "));
+          
+          
+          console.log("4 - Arrays e Listas Dinâmicas");
+          /* 
+          array | vetor =  é uma lista de valores guardados numa variável só.
+          Cada item da lista tem uma posição, a contagem começando do 0. 
+          */
+         
+         /* Criar */
+          let frutas = [];
+
+          /* Adicionar item à lista */
+            /* 
+                push() = Adicionar o item no FINAL da lista.
+                unshift() = Adicionar o item no INÍCIO da lista.
+            */
+            console.log("==== Adicionar item à lista ====");
+            frutas.push("Maçã");
+            console.log("Push = " + frutas);
+            
+            frutas.unshift("Banana");
+            console.log("Unshift = " + frutas);
+            
+            frutas.push("Cereja");
+            console.log("Push = " + frutas);
+            
+            
+            /* Pegar os itens */
+            
+            console.log("=== Pegar os itens ====");
+            
+            console.log(frutas[0]);
+            console.log(frutas[1]);
+            console.log(frutas[2]);
+            
+            
+            /* Remover item da lista */
+            /* 
+            pop() = Remover o item no FINAL da lista.
+            shift() = Remover o item no INÍCIO da lista.
+            */
+           console.log("=== Remover item da lista ====");
+           frutas.pop()
+           console.log("Pop = " + frutas);
+           
+           frutas.shift()
+           console.log("Shift = " + frutas);
+           
+           /* 
+           forEach = faz algo com cada item da lista de um por um
+           */
+          console.log("=== Pecorrendo por cada item ====");
+          
+          let alunos = ["João", "Pedro", "Maria"];
+          
+          /* arrow function - função de seta */
+          alunos.forEach( filho => {
+              console.log(`Aluno(a) presente: ${filho}`);
+            });
+            
+            /* simple function - função simples */
+            alunos.forEach(function(filho){
+            console.log(`Aluno(a) presente: ${filho}`);
+        });
+        
+        
+        
+        for(let i = 0; i < alunos.length; i++){
+            console.log(`Aluno(a) ${alunos[i]} posição: ${i}`);
+        }
+        
+        console.log("5 - Objetos e Estruturas Complexas");
+
+        /* 
+            Objeto = é quando você guarda várias informações sobre a mesma coisa juntas. 
+            Em vez de criar variáveis soltas(nome, sobrenome, cpf, endereco), 
+            a gente junta tudo num objeto só, organizando em pares de chave: valor.
+        */
+
+        /* 
+            let nomeProduto = "Pão de queijo";
+            let preco = 3.50;
+            let emEstoque = true;
+        */
+        let produto = {
+            nomeProduto: "Pão de queijo",
+            preco: 3.50,
+            emEstoque: true
+        };
+
+        /* Acessando  informações do objeto*/
+        console.log(produto.preco);
+        console.log(produto.nomeProduto);
+        
+        /* Objeto com método */
+        let cliente = {
+            nome: "Ana",
+            idade: 22,
+            saudacao: function(){
+                return `Olá, eu sou ${this.nome}`;
+            }
+
+        };
+
+       console.log(cliente.saudacao() + " " + cliente.idade);
+
+       /* Um array de objetos = vários produtos, cada um com suas informaçõoes. */
+
+       let cardapio = [
+            {nome: "Pão doce", categoria: "Pão", preco: 1.20},
+            {nome: "Croissant", categoria: "Pão", preco: 10.40},
+            {nome: "Bolo de chocolate", categoria: "Bolo", preco: 17.50}
+       ];
+        
+       cardapio.forEach(item =>{
+            console.log(`${item.nome} - ${item.categoria} - R$ ${item.preco}`);
+       });
+
+        </script>
+    </body>
+    </html>

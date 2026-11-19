@@ -1,0 +1,45 @@
+.pai-linha{
+    border: 1px solid #242561;
+    height: 250px;
+
+    /* posicionamento com flexbox */
+    display: flex;
+    justify-content:space-evenly;
+    align-items:stretch;
+}
+
+.pai-coluna{
+    border: 1px solid #242561;
+    height: 250px;
+    
+    /* posicionamento com flexbox */
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:stretch;
+
+}
+
+.itens{
+    background-color:#04c40e;
+    color: black;
+}
+
+.pai-wrap{
+    display:flex;
+    flex-wrap:wrap;
+    background: red;
+}
+
+.pai-align-content{
+    display:flex;
+    flex-wrap:wrap;
+    height: 700px;
+    background:red;
+    align-content:space-around;
+}
+.caixa{
+    height: 150px;
+    width: 150px;
+    margin-right: 10px;
+}

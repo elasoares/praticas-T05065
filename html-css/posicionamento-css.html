@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/posicionamento.css"/>
+        <title>Posicionamento CSS</title>
+    </head>
+    <body>
+
+        <!-- Elementos com static -->
+        <h2>Elemento Estático</h2>
+        <div class="caixa estatico">Estática </div>
+        <div class="caixa"> Não Estática</div>
+        <div> Não Estática e sem estilo</div>
+
+        <hr/>
+        <!-- Elementos com relative -->
+         <h2>Elemento Relativo</h2>
+        <div class="caixa relative verde">Verde  </div>
+        <div class="caixa laranja"> Laranja</div>
+        <div> Não Relativo e sem estilo</div>
+
+        <hr/>
+
+        <!-- Elementos com absoluto -->
+         <h2>Elemento absoluto</h2>
+        <div class="caixa avo">
+            <div class="caixa pai">
+                <div class="absoluto">
+                    Absoluto 
+                </div>
+            </div>
+        </div>
+    <hr/>
+    <!-- Elementos com Fixo -->
+        <h2>Elemento fixo</h2>
+    <div class="fixo">
+        teste
+    </div>
+
+    <hr/>
+        <!-- Elementos com overflow -->
+         <h2>Elemento com overflow</h2>
+        <div class="caixa overflow-auto">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum metus porttitor ipsum imperdiet fermentum quis non tellus. Mauris vulputate urna vitae aliquam dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam et luctus ex, at elementum lectus. Mauris in viverra nisi. Sed ac volutpat lacus, vitae suscipit metus. Aenean at neque et est tempor vulputate. Vivamus vitae auctor nisi. Aenean gravida porttitor diam nec tempor. Vestibulum ligula sapien, sodales et consequat in, venenatis vitae erat. Suspendisse ut quam vel lacus feugiat maximus vel et urna. Nam id nunc ex. Ut nec lacus commodo, sodales justo at, rutrum enim. In vitae sem erat. Duis a sollicitudin ex. Aliquam viverra aliquet turpis faucibus mattis.
+
+                Vestibulum sed enim auctor, sollicitudin lectus ultricies, sagittis lectus. Nulla nec imperdiet sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer accumsan quam mi, sed mattis ex faucibus nec. Suspendisse ac convallis nunc. Ut eu ligula massa. Praesent pellentesque, erat id laoreet ultrices, tortor felis vulputate erat, id dictum augue enim in magna. Morbi volutpat tortor quis augue feugiat elementum.
+
+                Duis a semper metus, id vestibulum sem. Etiam quis pharetra libero, nec aliquet dolor. Duis imperdiet gravida metus, eget varius eros dapibus eget. Pellentesque vel mi lorem. Pellentesque quis lectus eu arcu rhoncus blandit. Praesent auctor sed lorem quis rhoncus. Proin euismod venenatis nisl, ut eleifend velit rhoncus cursus. Sed vel purus sit amet ligula scelerisque dapibus vel vulputate lorem. Maecenas rutrum massa in malesuada lobortis. Mauris ut dignissim justo. In condimentum nunc nec tortor sodales, luctus venenatis arcu tincidunt. Suspendisse faucibus dapibus consectetur. Nunc suscipit rutrum quam in lacinia. Cras sed vestibulum sapien, et scelerisque leo. Nullam tincidunt mauris bibendum, vehicula dui sed, varius elit.
+
+                Vivamus varius ipsum dui, sed fringilla lorem scelerisque id. Cras sed ligula vitae quam gravida aliquet nec ut tortor. Suspendisse potenti. In hac habitasse platea dictumst. Vivamus nec ipsum lorem. Phasellus accumsan dui ac finibus sagittis. Curabitur diam justo, condimentum vitae aliquam quis, iaculis nec est. Aenean ut nulla vitae turpis tincidunt rhoncus in et felis. Vestibulum et ultricies mauris, nec porttitor purus. Donec congue maximus dui, et fermentum nibh.
+            </p>
+        </div>
+
+        <div class="caixa overflow-scroll">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit. Curabitur elementum metus 
+                porttitor ipsum imperdiet fermentum quis non 
+                tellus. 
+            </p>
+        </div>
+
+        <hr/>
+        <!-- Elementos com Float -->
+         <h2>Elemento Float</h2>
+        <div class="container-float">
+            <img class="imagem-float" src="./imagens/gatinho-miando.webp" alt="Gatinho miando" />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit. Curabitur elementum metus 
+                porttitor ipsum imperdiet fermentum quis non 
+                tellus. Mauris vulputate urna vitae aliquam dapibus. 
+                Vestibulum ante ipsum primis in faucibus orci luctus 
+                et ultrices posuere cubilia curae; Nam et luctus ex, 
+                at elementum lectus. Mauris in viverra nisi. Sed ac 
+                volutpat lacus, vitae suscipit metus. Aenean at neque 
+                et est tempor vulputate. Vivamus vitae auctor nisi. 
+                Aenean gravida porttitor diam nec tempor. Vestibulum 
+                ligula sapien, sodales et consequat in, venenatis vitae erat. 
+                Suspendisse ut quam vel lacus feugiat maximus vel et urna. 
+                Nam id nunc ex. Ut nec lacus commodo, sodales justo at, 
+                rutrum enim. In vitae sem erat. Duis a sollicitudin ex.
+                 Aliquam viverra aliquet turpis faucibus mattis. Vestibulum 
+                 sed enim auctor, sollicitudin lectus ultricies, 
+                  lectus. Nulla nec imperdiet sem. Orci varius natoque 
+                  penatibus et magnis dis parturient montes, nascetur 
+                  ridiculus mus. Integer accumsan quam mi, sed mattis 
+                   faucibus nec. Suspendisse ac convallis nunc. Ut eu
+                    ligula massa. Praesent pellentesque, erat id 
+                     ultrices, tortor felis vulputate erat, id dictum
+            </p>
+
+            <div class="limpar-float"></div>
+            <p> Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit. Curabitur elementum metus 
+                porttitor ipsum imperdiet fermentum quis non 
+                tellus. Mauris vulputate urna vitae aliquam dapibus. 
+                Vestibulum ante ipsum primis in faucibus orci luctus 
+                et ultrices posuere cubilia curae; Nam et luctus ex, 
+                at elementum lectus. Mauris in viverra nisi. Sed ac 
+                volutpat lacus, vitae suscipit metus. Aenean at neque 
+                et est tempor vulputate. Vivamus vitae auctor nisi. 
+                Aenean gravida porttitor diam nec tempor.
+            </p>
+        </div>
+
+
+        <!-- Elementos com display: inline-block -->
+        <h2>Elemento com display: inline-block </h2>
+    <div class="container-pai">
+        <a href="#" class="inlineBlock">Bloco 1</a>
+        <a href="#" class="inlineBlock">Bloco 2</a>
+        <a href="#" class="inlineBlock">Bloco 3</a>
+        <a href="#">Bloco 3</a>
+         <p>t est tempor vulputate. Vivamus vitae auctor nisi. 
+                Aenean gravida porttitor diam nec tempor.</p>
+    </div>
+   
+
+        <!-- Elementos com display: block -->
+        <h2>Elemento com display: block </h2>
+    <div class="container-pai">
+        <a href="#" class="block">Bloco 1</a>
+        <a href="#" class="block">Bloco 2</a>
+        <a href="#" class="block">Bloco 3</a>
+    </div>
+
+        <!-- Elementos com display: inline -->
+        <h2>Elemento com display: inline </h2>
+    <div class="container-pai">
+        <div  class="inline">Bloco 1</d>
+        <div class="inline">Bloco 2</div>
+        <div class="inline">Bloco 3</div>
+    </div>
+
+    </body>
+</html>

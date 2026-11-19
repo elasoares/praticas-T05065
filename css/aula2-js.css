@@ -1,0 +1,12 @@
+.divTeste{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+.alvo{
+    background-color:cornflowerblue;
+    font-size: 20px;
+}

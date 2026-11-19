@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+h1{
+    font-size: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.caixa{
+    background-color:darkgrey;
+    width: 400px;
+   /*  font-size: 15px; */
+}
+
+.caixa1-img{
+    background-color:burlywood;
+    width: 300px;
+    padding: 2em; /* 1 * 15 = 15 */
+}
+
+.texto2{
+    font-size: 1.5em; /*  1.5 * 20 = 30px */
+    padding: 1.5em; /* 1.5 * 30 = 45 padding */
+    margin: 1.5em;
+    border: 1px solid black;
+}
+
+.texto3{
+    font-size: 2em; /*  2 * 20 = 40px */
+    padding: 2em; /* 2 * 40 = 80 padding */
+    background-color:cadetblue;
+    margin: 2em;
+}
+
+/* Utilizando o (rem)no tamanho de font e espaçamento */
+
+html{
+    font-size: 26px;
+}
+
+.texto1-rem{
+    font-size: 2rem;
+}
+
+/* Utilizando o (vh, vw) para largura e altura */
+.container-vp{
+    width: 100vw; 
+     background: red;
+}
+.barra1-vw{
+    width: 50vw;
+    background: blue;
+}
+.barra2-vw{
+    width: 75vw;
+    background: blue;
+}
+.barra3-vw{
+    width: 100vw;
+    background: blue;
+}
+
+.caixa1-vh{
+    width:50vw;
+    height:30vh;
+    background: green;
+}
+
+.test{
+    border: 10px solid black;
+}

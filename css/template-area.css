@@ -1,0 +1,37 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas:
+    "cabeca cabeca cabeca"
+    "menu principal lateral"
+    "rodape rodape rodape";
+
+    gap: 8px;
+}
+
+.cabecalho{
+    grid-area: cabeca;
+    background-color: red;
+}
+
+.menu{
+    grid-area: menu;
+    background-color: green;
+}
+
+.principal{
+    grid-area: principal;
+    background-color: yellow;
+}
+
+.aside{
+    grid-area: lateral;
+    background-color: green;
+}
+
+.rodape{
+    grid-area: rodape;
+    background-color: red;
+}

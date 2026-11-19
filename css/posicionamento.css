@@ -1,0 +1,121 @@
+.caixa{
+    width: 250px;
+    height: 250px;
+    background-color:chocolate;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.estatico{
+    position: static;
+    background-color:rgb(36, 210, 30);
+}
+
+
+/*Elementos com relative*/
+
+.relative{
+    position: relative;
+    top: 260px;
+    left: 200px;
+    background-color:rgb(30, 210, 54);
+}
+
+
+.verde{
+    z-index:2;
+}
+.laranja{
+    z-index:5;
+    position: relative;
+}
+
+
+.pai{
+    position: relative;
+}
+
+.avo{
+    background-color:rgb(30, 63, 210);
+    width: 350px;
+    height: 350px;
+    position: relative;
+}
+
+.absoluto{
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+    background-color:rgb(30, 210, 54);
+    position: absolute;
+    right: 5px;
+    top: -10px;
+}
+
+.fixo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    text-align: center;
+    line-height:  50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color:blueviolet;
+}
+
+.overflow-auto{
+    color:black;
+    overflow:auto;
+}
+
+.overflow-scroll{
+    color:black;
+    overflow:auto;
+}
+
+.container-float{
+    background-color:aquamarine;
+
+}
+
+.imagem-float{
+    width:150px;
+    float: left;
+}
+
+.limpar-float{
+    clear:both;
+}
+
+.container-pai{
+    width: 500px;
+    height: 200px;
+    border: dashed 3px #333 ;
+    background-color:rgb(255, 127, 206);
+}
+
+.inlineBlock{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    padding: 5px;
+/*     line-height: 200px; */
+    display: inline-block;
+    border: dashed 3px #e74a01 ;
+    background-color:rgb(255, 189, 127);
+}
+
+.block{
+    display: block;
+    border: dashed 3px #e74a01 ;
+    background-color:rgb(255, 189, 127);
+}
+
+.inline{
+    display: inline;
+    border: dashed 3px #e74a01 ;
+    background-color:rgb(255, 189, 127);
+    width: 500px;
+    height: 525px;
+}
