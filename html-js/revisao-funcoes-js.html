@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Revisão de funções</title>
+    </head>
+    <body>
+        <div id="resultado-sem"></div>
+        <div id="resultado-com"></div>
+
+        <div>
+            <label for="preco">Preço do Item (R$):</label>
+            <input type="number" id="preco"/>
+
+            <label for="qtd">Quantidade</label>
+            <input type="number" id="qtd"/>
+
+
+            <label for="distancia">Distância (km):</label>
+            <input type="number" id="distancia"/>
+
+            <button id="btn-calcular">Calcular Pedido</button>
+        </div>
+
+        <p id="resultado"></p>
+
+
+
+
+        <script>
+            console.log("Atividade 1: Funções Básicas para Cálculos");
+            /* 
+                function nomeDaFunction(){
+                    //Bloco de código
+                }
+
+                function = a palavra que avisa "Estou criando uma função"
+                nomeDaFunction = nome da função(Você escolhe! Deve usar um nome que diga o que ela faz);
+                () = o parâmentro - ele recebe informações de fora ou não
+                {...} = o corpo - onde o trabalho acontece
+             */
+
+            function tocarSino(){
+                console.log("🔔 Ding, dong, Ding, dong");
+            }
+        
+                tocarSino();
+                tocarSino();
+                tocarSino();
+
+
+            function saudacao(){
+                console.log("Olá! Seja bem-vinda!")
+            }
+                saudacao();
+
+            /* 
+                function nomeDaFunction(){
+                        //Bloco de código
+                        // returno - devolve a resposta final 
+                }
+            */
+            console.log('Atividade 2: Funções com Retorno')
+            /* ============   Sem return =================== */            
+            function mostrarDobro(n){
+                n*2;
+            }
+            mostrarDobro(10);
+            document.getElementById("resultado-sem").textContent = "Resposta(SEM RETURN): " + mostrarDobro(10);
+            
+            
+            /* ============   Com return =================== */
+            function calcularDobro(n){
+              return  n *= 2;
+            }
+            document.getElementById("resultado-com").textContent = "Resposta(COM RETURN): " + calcularDobro(20);
+
+
+            function calcularImposto(valor){
+                return valor * 0.08;
+            }
+
+            let imposto = calcularImposto(200);
+            console.log("Imposto: R$ " + imposto);
+
+            function pegarTotalFinal(subtotal){
+                let imposto =  calcularImposto(subtotal);
+                return subtotal + imposto;
+            }
+            console.log("Total: R$ " + pegarTotalFinal(200));
+
+            function verificarFreteGratis(valor){
+                if(valor > 50){
+                    return "Você ganhou frete grátis!";
+                }else{
+                    return "Falta pouco pro frete grátis (acima de R$ 50)";
+                }
+            }
+
+            console.log(verificarFreteGratis(80));
+            console.log(verificarFreteGratis(30));
+
+            console.log("Atividade 3: Arrow Functions");
+
+            /* 
+               let variavel = () => {
+                    //Bloco de código
+                 }
+            */
+
+            //Tradicional
+            function dobrar(n){
+                return n * 2;
+            }
+
+            function receberGorjeta(conta){
+                return conta * 0.1;
+            }
+
+            function somar (x, y){
+                return x + y;
+            }
+
+            /* Mesma coisa com arrow function */
+
+            let dobro = (n) =>{
+                return n * 2;
+            }
+
+            let gorjeta = (conta) => {
+                return conta * 0.1;
+            }
+
+            let resultadoSoma = (x, y) =>  x + y;
+            
+            let precoComDesconto = (valor, percentual) => {
+                let desconto = valor * (percentual / 100);
+                return valor - desconto;
+            }
+
+            console.log(dobro(8));
+            console.log(dobrar(8));
+
+            console.log(gorjeta(80));
+            console.log(receberGorjeta(80));
+            
+            console.log(somar(12, 8));
+            console.log(resultadoSoma(12, 8));
+
+            console.log(precoComDesconto(150, 20));
+
+            console.log("Atividade 4: Aplicação Prática Completa");
+
+            const calcularSubtotal = (preco, qtd) => preco * qtd;
+            const taxaEntrega = (km) => km * 2; 
+            const calcularImpostoT = (valor) => valor * 0.08;
+
+            function verificarFreteGratisT(subtotal, frete){
+                if(subtotal > 50) return 0;
+                return frete;
+            }
+
+            document.getElementById("btn-calcular").addEventListener('click', function(){
+                // 1 - pegamos os valores do campo de entrada(input)
+                let preco = parseFloat(document.getElementById("preco").value);
+                let qtd = parseInt(document.getElementById("qtd").value);
+                let distancia = parseFloat(document.getElementById("distancia").value);
+
+                // 2 - Usar as funções criadas
+
+                let subtotal =  calcularSubtotal(preco, qtd);
+                let frete =  verificarFreteGratisT(subtotal, taxaEntrega(distancia));
+                let imposto = calcularImpostoT(subtotal);
+                let total = subtotal + frete + imposto;
+
+                // 3 mostrar na tela
+                document.getElementById("resultado").textContent = `
+                    Subtotal: R$ ${subtotal} | Imposto: R$ ${imposto}
+                    Frete: R$ ${frete} | Total: R$ ${total}
+                `;
+            });
+
+
+        </script>
+    </body>
+</html>
